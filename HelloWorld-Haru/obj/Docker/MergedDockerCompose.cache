@@ -1,0 +1,15 @@
+services:
+  helloworld-haru:
+    build:
+      context: C:\Docker\test-docker\HelloWorld-Haru
+      dockerfile: HelloWorld-Haru/Dockerfile
+    environment:
+      ASPNETCORE_ENVIRONMENT: Development
+      ASPNETCORE_URLS: https://+:443;http://+:80
+    image: helloworldharu
+    ports:
+    - target: 80
+    - target: 443
+    volumes:
+    - C:\Users\kitti.haruetaisodsai\AppData\Roaming\ASP.NET\Https:/root/.aspnet/https:ro
+version: '3.4'
